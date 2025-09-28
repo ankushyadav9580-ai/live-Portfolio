@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Faculty & My Profile</title>
+  <style>
+    /* Body & Background */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+      background: #004aad;
+      color: #fff;
+      flex-wrap: wrap;
+    }
+    header img.logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    /* Faculty Cards */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin: 30px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .card:hover {
+      transform: translateY(-12px) scale(1.05);
+      box-shadow: 0 14px 25px rgba(0,0,0,0.25);
+    }
+    .card img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #004aad;
+      transition: transform 0.4s;
+    }
+    .card img:hover {
+      transform: rotate(10deg) scale(1.1);
+    }
+    .card h3 { margin: 12px 0 5px; color: #222; }
+    .card p { color: #555; font-size: 14px; }
+
+    /* About College */
+    .about {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .about h2 { color: #004aad; margin-bottom: 15px; }
+    .about p { color: #333; line-height: 1.6; font-size: 16px; }
+
+    /* My Profile */
+    .profile {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .profile h2 { color: #004aad; margin-bottom: 20px; }
+    .profile img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 15px; border:3px solid #004aad; }
+
+    /* Skills with animation */
+    .skills {
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: left;
+    }
+    .skill {
+      margin-bottom: 12px;
+    }
+    .skill-name { font-size: 14px; margin-bottom: 4px; color: #004aad; }
+    .skill-bar {
+      width: 100%;
+      background: #e3f2fd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 16px;
+      width: 0;
+      background: #004aad;
+      border-radius: 8px;
+      transition: width 1.5s;
+    }
+
+    /* Contact */
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .contact a {
+      background: #e3f2fd;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #004aad;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .contact a img { width:20px; height:20px; }
+    .contact a:hover { background: #004aad; color: #fff; transform: scale(1.1); }
+
+    /* Footer */
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px){
+      header h1 { font-size: 22px; }
+      .card img { width: 100px; height: 100px; }
+      .profile img { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  
+    <img src="colleg1.png" alt="College Logo" class="logo">
+	<h1>INVERTIS UNIVERSITY BAREILLY</h1>
+
+  </header>
+
+  <!-- Faculty Cards -->
+  <div class="container">
+    <div class="card">
+      <img src="Dean.jpg" alt="Faculty 1">
+      <h3>Prof.R.K Shukla</h3>
+      <p>Dean Engineering Department<br>
+	  Contact 9690017913
+	  </p>
+    </div>
+    <div class="card">
+      <img src="gaurav.jpg" alt="Faculty 2">
+      <h3>Dr.Gaurav Agarwal</h3>
+      <p>HOD CSE Department<br>
+	  Contact 7217011218</p>
+    </div>
+    <div class="card">
+      <img src="dinesh.jpg" alt="Faculty 3">
+      <h3>Dr.Dinesh Tiwari</h3>
+      <p>Class Incharge<br>
+	  Contact 8574688148</p>
+    </div>
+    
+  </div>
+
+  
+  <!-- My Profile -->
+  <section class="profile">
+    <h2>My Profile</h2>
+    <img src="ankush3.jpg" alt="My Photo">
+    
+	<p style="color:black;">
+  <strong>Name:</strong> Ankush Yadav
+</p>
+<p style="color:black;">
+  <strong>Student:</strong> B.Tech CSE
+</p>
+
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-name">Python</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:65%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">C Programming</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:55%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:85%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">github</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:35%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:20%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">MS Excel</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width:80%;"></div></div>
+      </div>
+    </div>
+
+    <p><strong>Contact Me:</strong></p>
+    <div class="contact">
+      <a href="https://www.ankushyadav9580@gmail.com"><img src="email2.png" alt="Email"> Email</a>
+      <a href="https://wa.me/919580947661"><img src="whats.png" alt="WhatsApp"> WhatsApp</a>
+      <a href="https://www.facebook.com/share/1BDn5QqG1s/"><img src="facebook.png" alt="facebook">facebook</a>
+	  <a href="https://www.linkedin.com/in/ankush-%EA%AD%B9%E1%B4%80%E1%B4%85%E1%B4%80%EA%AA%9C-09b691368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="linkdin.png" alt="college">Linkedin</a>
+	  <a href="https://www.instagram.com/kingankush_yadavanshi_11?"><img src="instagram.png" alt="college">Instagram</a>
+	  <a href="https://www.x.com/ankushyada60613?t=X"><img src="twitter.png" alt="college">Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Your College. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
+
+<!-- Resume & Hire Me Section -->
+<div class="resume-hire">
+  <!-- Resume Button -->
+  <a href="ankush1.pdf" download class="btn resume-btn">📄 Download Resume <a href="#contact" class="btn">💼 Hire Me</a></a>
+
+</div>
+
+<style>
+
+
+  .resume-hire {
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  /* Resume Button - Blue */
+  .resume-btn {
+    background: #00d4ff;
+    color: #fff;
+  }
+  .resume-btn:hover {
+    background: #0099cc;
+    transform: scale(1.05);
+  }
+
+  /* Hire Me Button - Red */
+  .hire-btn {
+    background: #ff3b3b;
+    color: #fff;
+  }
+  .hire-btn:hover {
+    background: #e60000;
+    transform: scale(1.05);
+  }
+</style>
+
+  
+  
+  
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d1b2a; /* Dark blue background */
+      color: #fff;
+    }
+
+    /* ---------- Education Section ---------- */
+    .education-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .education-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #ff3b3b; /* Red heading */
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 40px;
+      padding-left: 40px;
+      border-left: 3px solid #ff3b3b; /* Red line */
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-item::before {
+      content: "🎓";
+      position: absolute;
+      left: -55px;
+      top: 10px;
+      background: #ff3b3b;
+      color: #fff;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      border: 3px solid #1e1e1e;
+    }
+
+    .timeline-content {
+      padding: 20px;
+      border-radius: 12px;
+      color: #f1f1f1;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+
+    .university {
+      background: linear-gradient(135deg, #ff3b3b, #1e1e1e);
+      border-left: 6px solid #ff3b3b;
+    }
+
+    .secondary {
+      background: linear-gradient(135deg, #1e1e1e, #ff3b3b);
+      border-left: 6px solid #ff3b3b;
+    }
+
+    .highschool {
+      background: linear-gradient(135deg, #ff3b3b, #2c2c2c);
+      border-left: 6px solid #ff3b3b;
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffdfdf;
+    }
+
+    .timeline-content p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #e5e5e5;
+    }
+
+    /* ---------- Contact Section ---------- */
+    .contact-section {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      color: #ff4d4d;
+      margin-bottom: 25px;
+      font-size: 32px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #ffcccc;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #2a2a2a;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border: 2px solid #ff4d4d;
+    }
+
+    .contact-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4d4d;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .contact-form button:hover {
+      background: #e60000;
+      transform: scale(1.05);
+    }
+	
+	
+	
+  </style>
+</head>
+<body>
+
+  <!-- Education Section -->
+  <div class="education-section">
+    <h2>My <span style="color:#00d4ff;">Education</span></h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-content university">
+          <h3>University</h3>
+          <p><strong>Bachelor of Technology in Computer Science</strong></p>
+          <p>Invertis University, 2025 – Present</p>
+          <p><em>Relevant coursework:</em>cloud Engineering,Data Science, Web Development, Software Engineering</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content secondary">
+          <h3>Secondary School</h3>
+          <p>Uttar Pradesh Board</p>
+          <p>12th, Physics Chemistry Maths</p>
+          <p>Apr 2025 – Mar 2026</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content highschool">
+          <h3>High School</h3>
+          <p>Uttar Pradesh Board</p>
+          <p>10th, Maths, English, Hindi, Science</p>
+          <p>Apr 2023 – Mar 2024</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth; /* Smooth scroll */
+    background-color: #111; /* Dark background */
+    color: #fff; /* White text */
+  }
+  section, .contact-section {
+    padding: 100px 20px;
+    height: 100vh;
+  }
+  #home {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #contact {
+    background-color: #1a1a1a;
+  }
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e10600; /* Bright red */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  .btn:hover {
+    background: #ff3b3b; /* Hover effect */
+  }
+  h1, h2 {
+    color: #fff;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+  }
+  input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #bbb;
+  }
+  button {
+    padding: 12px;
+    background: #e10600; /* Red button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #ff3b3b;
+  }
+</style>
+</head>
+<body>
+
+
+
+<!-- Contact Section -->
+<div id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <!-- Formspree action added and name attributes set -->
+  <form class="contact-form" action="https://formspree.io/f/mldpgnnq" method="POST">
+    
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Enter subject">
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+  <!-- Optional success message -->
+  <p id="success" style="display:none;">Thank you! Your message has been sent.</p>
+
+  <script>
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function() {
+        setTimeout(() => {
+            document.getElementById('success').style.display = 'block';
+        }, 500); // after submit
+    });
+  </script>
+</div>
+
+
+</body>
+</html>
+
+</body>
+</html>
+
+<!-- Include this in your body -->
+<section id="about" style="background-color: #1a1a1a; padding: 60px 20px; color: #fff; position: relative; text-align: center;">
+
+  <!-- Left Social Media Images -->
+  <div style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); display: flex; flex-direction: column; gap: 15px;">
+ 
+  </div>
+
+  <!-- Center Content -->
+  <div style="max-width: 600px; margin: auto; line-height: 1.6;">
+    <h2>About My College</h2>
+    <p><strong>Invertis University Bareilly</strong> is a premier institute known for excellence in engineering education and innovation. It focuses on providing students with strong technical skills and practical knowledge.</p>
+  </div>
+  
+    <div class="contact">
+      <a href="https://www.info@invertis.org"><img src="email2.png" alt="Email"> Email</a>
+      <a href="https://wa.me/917217012775"><img src="whats.png" alt="WhatsApp"> WhatsApp</a>
+      <a href="https://www.invertisuniversity.ac.in"><img src="colleg1.png" alt="college">college</a>
+	  <a href="https://www.linkedin.com/school/invertisuniversity/"><img src="linkdin.png" alt="college">Linkedin</a>
+	  <a href="https://www.instagram.com/invertis.university?igsh=MWx0bHhlcnB5MmMwZw=="><img src="instagram.png" alt="college">Instagram</a>
+	  <a href="https://www.x.com/InvertisUni?t=8uFNwaoww4bmlgd2XBbwiQ&s=08"><img src="twitter.png" alt="college">Twitter</a>
+    </div>
+  </section>
+
